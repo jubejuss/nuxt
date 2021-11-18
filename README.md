@@ -41,7 +41,6 @@ Layouts are a great help when you want to change the look and feel of your Nuxt 
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
 
-
 ### `pages`
 
 This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
@@ -69,50 +68,52 @@ This directory contains your Vuex store files. Creating a file in this directory
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
 
 ## Isetehtud osa
-Nuxti põhimõte on see, et on lehed `pages` folderis ja komponendid `components` folderis. Komponentide all defineerid erinevad komponendid, nt `NavBar.vue`, mille sees võib ka olla komponent, nt `AppLinks.vue`. nimed pole tähtsad, aga need siis impordid oma lehele, nt `index.vue`sse  
+
+Nuxti põhimõte on see, et on lehed `pages` folderis ja komponendid `components` folderis. Komponentide all defineerid erinevad komponendid, nt `NavBar.vue`, mille sees võib ka olla komponent, nt `AppLinks.vue`. nimed pole tähtsad, aga need siis impordid oma lehele, nt `index.vue`sse
 
 [Üks võimalik juhend](https://www.codementor.io/@cejowisz/navigation-drawer-tutorial-with-nuxt-rrax23tmw)  
-Käesolev leht on tehtud Nuxt+Tailwindiga [Juhend](https://tailwindcss.nuxtjs.org/)  
+Käesolev leht on tehtud Nuxt+Tailwindiga [Juhend](https://tailwindcss.nuxtjs.org/)
 
-Nuxti globaalne päis pannakse paika `nuxt.config.js` failis  
+Nuxti globaalne päis pannakse paika `nuxt.config.js` failis
 
 ### Tailwind CSS
 
 Tailwindi confimiseks võib teha juurikasse `tailwind.config.js` faili.  
 Tailwind on vaikimisi vasakule joondumisega, seega tsentreerimiseks peaks kasutama `mx-auto` klassi või siis `tailwind.config.js`-i lisama:
+
 ```javascript
 module.exports = {
-    theme: {
-        container: {
-            center: true,
-        },
+  theme: {
+    container: {
+      center: true,
     },
-}
+  },
+};
 ```
-Siin on tehtud nii, et kõigepealt `npx tailwindcss init`  
 
-*** Default Layout *** 
-Kui tahta mingeid asju, mis mõjuks kõikjale, tuleks teha `default.vue` ja pista see `layouts` foldersse, mis tuleb samuti luua. Tolle sees peab olema kindlasti, vähemat alul: 
+Siin on tehtud nii, et kõigepealt `npx tailwindcss init`
+
+**_ Default Layout _**
+Kui tahta mingeid asju, mis mõjuks kõikjale, tuleks teha `default.vue` ja pista see `layouts` foldersse, mis tuleb samuti luua. Tolle sees peab olema kindlasti, vähemat alul:
+
 ```nuxt
 <template>
   <Nuxt />
 </template>
 ```
+
 Kui see tehtud, saab kõikide lehtede ühiseid asju, nt body css või head meta, pista sinna.
 
 [Täpsem juhend](https://nuxtjs.org/docs/concepts/views/#html-head)
 
-*** Default layouti sisse minev ***  
-Näidiseid, kuidas kirjutada default.vue-sse metainfot vms, vaata [*** siit ***](https://nuxtjs.org/docs/features/meta-tags-seo/)
-  
-body jms kohta leiad juhendi [*** siit ***](https://vue-meta.nuxtjs.org/api/#bodyattrs)
+**_ Default layouti sisse minev _**  
+Näidiseid, kuidas kirjutada default.vue-sse metainfot vms, vaata [**_ siit _**](https://nuxtjs.org/docs/features/meta-tags-seo/)
 
+body jms kohta leiad juhendi [**_ siit _**](https://vue-meta.nuxtjs.org/api/#bodyattrs)
 
-
-
-
-
-
+**_ Oma Css-i lisamine ja page transitionid _**
+https://blog.logrocket.com/css-transitions-in-nuxt-js-an-overview/
+https://dev.to/debs_obrien/page-and-layout-transitions-in-nuxt-js-33f
 
 Transitionid
 https://debbie.codes/blog/nuxt-page-and-layout-transitions/

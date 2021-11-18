@@ -1,5 +1,5 @@
 <template>
-  <main class="container bg-gray-100">
+  <main class="bg-gray-100">
     <div class="p-4">
       <div class="max-w-sm rounded overflow-hidden shadow-lg mb-4">
         <img

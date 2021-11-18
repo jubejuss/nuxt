@@ -1,9 +1,7 @@
 <template>
   <div>
     <AppLinks />
-    <div class="container">
-      <Nuxt />
-    </div>
+    <Nuxt />
   </div>
 </template>
 

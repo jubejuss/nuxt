@@ -1,15 +1,6 @@
 <template>
-  <header>
-    <h1>Home page</h1>
-    <AppLinks />
-  </header>
+  <main class="bg-blue-100">
+    <h1>Halloo!</h1>
+  </main>
 </template>
-
-<script>
-import appLinks from "~/components/AppLinks";
-export default {
-  components: {
-    appLinks,
-  },
-};
-</script>
+<script></script>
